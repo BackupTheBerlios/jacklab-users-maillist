@@ -1,0 +1,431 @@
+From kevin at dotmon.com  Wed Sep 14 12:15:46 2005
+From: kevin at dotmon.com (Kevin Donnelly)
+Date: Wed, 14 Sep 2005 11:15:46 +0100
+Subject: [Jacklab-users] libpangocairo
+Message-ID: <200509141115.46366.kevin@dotmon.com>
+
+Hi 
+
+I'm using SUSE 9.3, and apt, to try to install the oc2pus versions of phat and 
+specimen.  Both of them ask for libpangocairo.so, even though I have both 
+cairo and pango installed.  Does anyone know where this file can be found?
+
+-- 
+
+Pob hwyl / Best wishes
+
+Kevin Donnelly
+
+www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+www.cymrux.org.uk - Linux Cymraeg ar un CD
+
+
+From gimpel at sonnenkinder.org  Wed Sep 14 13:15:14 2005
+From: gimpel at sonnenkinder.org (Thomas Kuther)
+Date: Wed, 14 Sep 2005 13:15:14 +0200
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <200509141115.46366.kevin@dotmon.com>
+References: <200509141115.46366.kevin@dotmon.com>
+Message-ID: <20050914131514.7b80a1ef@SiRiUS.home>
+
+On Wed, 14 Sep 2005 11:15:46 +0100
+Kevin Donnelly <kevin at dotmon.com> wrote:
+
+> Hi 
+> 
+> I'm using SUSE 9.3, and apt, to try to install the oc2pus versions of
+> phat and specimen.  Both of them ask for libpangocairo.so, even
+> though I have both cairo and pango installed.  Does anyone know where
+> this file can be found?
+> 
+Not running SuSE myself, but a quick search for "libpangocairo-1.0.so.0"
+gives: SuSE 9.X
+ftp.suse.com/pub/suse/i386/supplementary/GNOME/update_for_9.3/base/pango-1.10.0-3.i586.rpm
+
+a search for "libpangocairo-1.0.so" gives pango-devel from the update
+repo. so maybe you might have to add the gnome repo to apt's
+sources.list. 
+
+try if this fixes it plz!
+
+regards!
+tom
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jacklab-users/attachments/20050914/7943de14/attachment.pgp>
+
+From kevin at dotmon.com  Wed Sep 14 15:11:15 2005
+From: kevin at dotmon.com (Kevin Donnelly)
+Date: Wed, 14 Sep 2005 14:11:15 +0100
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <20050914131514.7b80a1ef@SiRiUS.home>
+References: <200509141115.46366.kevin@dotmon.com> <20050914131514.7b80a1ef@SiRiUS.home>
+Message-ID: <200509141411.15582.kevin@dotmon.com>
+
+Hi Thomas
+
+On Wednesday 14 September 2005 12:15, Thomas Kuther wrote:
+> Not running SuSE myself, but a quick search for "libpangocairo-1.0.so.0"
+> gives: 
+
+For my education, how did you do this?
+
+> a search for "libpangocairo-1.0.so" gives pango-devel from the update
+> repo. so maybe you might have to add the gnome repo to apt's
+> sources.list.
+
+Hmm.  Trying to install pango-1.10 says that libcairo.so.2 is required, and 
+there's no updated cairo package in supplementary, and even if it were, that 
+will presumably require other updates.  Having read this:
+http://forums.suselinuxsupport.de/lofiversion/index.php/t18115.html
+I'm getting cold feet!
+
+Thanks for the advice anyway.  I'll probably just wait for another 6 months 
+(and openSUSE 10?) before I try some of these enticing audio apps.
+
+-- 
+
+Pob hwyl / Best wishes
+
+Kevin Donnelly
+
+www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+www.cymrux.org.uk - Linux Cymraeg ar un CD
+
+
+From gimpel at sonnenkinder.org  Wed Sep 14 15:41:42 2005
+From: gimpel at sonnenkinder.org (Thomas Kuther)
+Date: Wed, 14 Sep 2005 15:41:42 +0200
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <200509141411.15582.kevin@dotmon.com>
+References: <200509141115.46366.kevin@dotmon.com>
+	<20050914131514.7b80a1ef@SiRiUS.home>
+	<200509141411.15582.kevin@dotmon.com>
+Message-ID: <20050914154142.6b0f94f6@SiRiUS.home>
+
+On Wed, 14 Sep 2005 14:11:15 +0100
+Kevin Donnelly <kevin at dotmon.com> wrote:
+
+> Hi Thomas
+> 
+> On Wednesday 14 September 2005 12:15, Thomas Kuther wrote:
+> > Not running SuSE myself, but a quick search for
+> > "libpangocairo-1.0.so.0" gives: 
+> 
+> For my education, how did you do this?
+
+i just googled for libpangocairo and found rpmfind.net
+
+> 
+> > a search for "libpangocairo-1.0.so" gives pango-devel from the
+> > update repo. so maybe you might have to add the gnome repo to apt's
+> > sources.list.
+> 
+> Hmm.  Trying to install pango-1.10 says that libcairo.so.2 is
+> required, and there's no updated cairo package in supplementary, and
+> even if it were, that will presumably require other updates.  Having
+> read this:
+> http://forums.suselinuxsupport.de/lofiversion/index.php/t18115.html
+> I'm getting cold feet!
+> 
+> Thanks for the advice anyway.  I'll probably just wait for another 6
+> months (and openSUSE 10?) before I try some of these enticing audio
+> apps.
+
+Humm damn. Just heard that the gnome repositories have heavy
+inconsistencies... that's why the dependencies are borked.
+and if you want an app that uses gnome crap, you might run in trouble.
+not a fault of jacklab or oc2pus though...
+
+No idea about that, sorry. 
+
+any other guys here? our SuSE users? :)
+
+greets!
+tom
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jacklab-users/attachments/20050914/d5b480c6/attachment.pgp>
+
+From kevin at dotmon.com  Wed Sep 14 15:59:48 2005
+From: kevin at dotmon.com (Kevin Donnelly)
+Date: Wed, 14 Sep 2005 14:59:48 +0100
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <20050914154142.6b0f94f6@SiRiUS.home>
+References: <200509141115.46366.kevin@dotmon.com> <200509141411.15582.kevin@dotmon.com> <20050914154142.6b0f94f6@SiRiUS.home>
+Message-ID: <200509141459.48725.kevin@dotmon.com>
+
+On Wednesday 14 September 2005 14:41, Thomas Kuther wrote:
+> i just googled for libpangocairo and found rpmfind.net
+
+Ah - I'll try that next time!
+
+> Humm damn. Just heard that the gnome repositories have heavy
+> inconsistencies... that's why the dependencies are borked.
+> and if you want an app that uses gnome crap, you might run in trouble.
+> not a fault of jacklab or oc2pus though...
+
+No, indeed.  I wouldn't disagree with calling GNOME crap, though!
+
+-- 
+
+Pob hwyl / Best wishes
+
+Kevin Donnelly
+
+www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+www.cymrux.org.uk - Linux Cymraeg ar un CD
+
+
+From core at jacklab.net  Wed Sep 14 16:00:39 2005
+From: core at jacklab.net (JackLab Core Team)
+Date: Wed, 14 Sep 2005 16:00:39 +0200
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <200509141411.15582.kevin@dotmon.com>
+References: <200509141115.46366.kevin@dotmon.com> <20050914131514.7b80a1ef@SiRiUS.home> <200509141411.15582.kevin@dotmon.com>
+Message-ID: <43282D07.4050307@jacklab.net>
+
+Hi Kevin,
+
+> Hi Thomas
+>
+> On Wednesday 14 September 2005 12:15, Thomas Kuther wrote:
+>   
+>> Not running SuSE myself, but a quick search for "libpangocairo-1.0.so.0"
+>> gives: 
+>>     
+>
+> For my education, how did you do this?
+>
+>   
+>> a search for "libpangocairo-1.0.so" gives pango-devel from the update
+>> repo. so maybe you might have to add the gnome repo to apt's
+>> sources.list.
+>>     
+>
+> Hmm.  Trying to install pango-1.10 says that libcairo.so.2 is required, and 
+> there's no updated cairo package in supplementary, and even if it were, that 
+> will presumably require other updates.  Having read this:
+> http://forums.suselinuxsupport.de/lofiversion/index.php/t18115.html
+> I'm getting cold feet!
+>   
+Yes thats a real heavy prob and i am suffering about this, too. Please 
+write an email to oc2pus at arcor.de - maybe he can help you with a kind of 
+workaround.
+> Thanks for the advice anyway.  I'll probably just wait for another 6 months 
+> (and openSUSE 10?) before I try some of these enticing audio apps.
+>   
+Hopefully this will never happen with oS10  ;) I allready work with it 
+and it seemed to be pretty good.
+
+regards,
+Michael
+
+
+From kevin at dotmon.com  Wed Sep 14 21:41:20 2005
+From: kevin at dotmon.com (Kevin Donnelly)
+Date: Wed, 14 Sep 2005 20:41:20 +0100
+Subject: [Jacklab-users] libpangocairo
+In-Reply-To: <43282D07.4050307@jacklab.net>
+References: <200509141115.46366.kevin@dotmon.com> <200509141411.15582.kevin@dotmon.com> <43282D07.4050307@jacklab.net>
+Message-ID: <200509142041.20271.kevin@dotmon.com>
+
+On Wednesday 14 September 2005 15:00, JackLab Core Team wrote:
+> Yes thats a real heavy prob and i am suffering about this, too. Please
+> write an email to oc2pus at arcor.de - maybe he can help you with a kind of
+> workaround.
+
+Hi Michael - I'll do that.
+
+> Hopefully this will never happen with oS10  ;) I allready work with it
+> and it seemed to be pretty good.
+
+That's interesting to know.  By the way, I really like the idea of jacklab - I 
+just found it today.
+
+-- 
+
+Pob hwyl / Best wishes
+
+Kevin Donnelly
+
+www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+www.cymrux.org.uk - Linux Cymraeg ar un CD
+
+
+From kevin at dotmon.com  Thu Sep 15 21:39:00 2005
+From: kevin at dotmon.com (Kevin Donnelly)
+Date: Thu, 15 Sep 2005 20:39:00 +0100
+Subject: [Jacklab-users] Libcairo problems with SUSE 9.3
+Message-ID: <200509152039.00736.kevin@dotmon.com>
+
+(This deals with the issue I posted about yesterday - if you like it could be 
+put on the website as a howto.)
+
+A recent version of cairo (cairo-1.0.0) contained only libcairo.so.2.  Many of 
+the SUSE 9.3 rpms were compiled against an earlier version (cairo-0.3.0) 
+which contained only libcairo.so.1.  Many recent rpms have been compiled 
+against the new version, and will not install, because they have a dependency 
+on libcairo.so.2 which cannot be met.  But upgrading cairo (or installing it 
+from apt) will mean that existing apps will stop working unless you symlink 
+libcairo.so.1 to the new libcairo.so.2.  This note (based on advice from 
+oc2pus - thanks!) explains how to deal with this situation.
+
+Run:
+rpm -ql cairo
+to see what version you have.  If it contains libcairo.so.1, you can either 
+keep a copy of this:
+(su) cd /usr/lib
+(su) cp libcairo.so.1 libcairo.so.1_orig
+and move it back once you have upgraded cairo, or you can make a symlink as 
+shown below.  If it contains libcairo.so.2, carry out the last two steps here 
+(symlink and virtual rpm).
+
+Download cairo-1.0.0 from somewhere like:
+ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/i386/supplementary/GNOME/update_for_9.3/applications
+Cairo depends on libpixman, so you will need to install that if it is not 
+already installed - the best thing is probably to download libpixman-0.1.6 
+from the same place.  Many multimedia apps will also want libpangocairo.so.1, 
+so get pango-1.10.0 while you're at it.  Download the equivalent -devel rpms 
+from:
+ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/i386/supplementary/GNOME/update_for_9.3/development
+if you think you might be compiling software later.
+
+Go to the download directory, and run:
+(su) rpm -Uvh libpix*
+(su) rpm -Uvh cairo*
+(su) rpm -Uvh pango*
+(su) SuSEconfig
+
+With the new cairo installed (or if "rpm -ql cairo" earlier showed 
+libcairo.so.2), symlink libcairo.so.1:
+(su) cd /usr/lib
+(su) ln -s libcairo.so.2 libcairo.so.1
+
+To keep the rpm database happy, so that it does not complain about a missing 
+libcairo.so.1, install the attached myVirtualPackages.rpm (kindly supplied by 
+oc2pus - see his script for this at:
+http://www.linux-club.de/viewtopic.php?t=13336
+
+The above steps mean that most of the multimedia rpms made by oc2pus at:
+http://ftp4.gwdg.de/pub/linux/suse/apt/SuSE/9.2-i386/RPMS.suser-oc2pus/
+should now install with no problems.
+
+-- 
+
+Pob hwyl / Best wishes
+
+Kevin Donnelly
+
+www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+www.cymrux.org.uk - Linux Cymraeg ar un CD
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: myVirtualPackages-1.1-0.oc2pus.1.i386.rpm
+Type: application/x-rpm
+Size: 1330 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jacklab-users/attachments/20050915/2b5a9670/attachment.bin>
+
+From gimpel at sonnenkinder.org  Thu Sep 15 23:20:10 2005
+From: gimpel at sonnenkinder.org (Thomas Kuther)
+Date: Thu, 15 Sep 2005 23:20:10 +0200
+Subject: [Jacklab-users] Libcairo problems with SUSE 9.3
+In-Reply-To: <200509152039.00736.kevin@dotmon.com>
+References: <200509152039.00736.kevin@dotmon.com>
+Message-ID: <20050915232010.67748713@SiRiUS.home>
+
+Hi Kevin!
+
+Very cool, man! :)
+Indeed a link to this mail in the archive should be posted as a hint!
+Would be a harm if problems like that keep users off trying to use
+linux as "soundmachine"!
+
+Have fun testing audio stuff on linux ;)
+
+Greets!
+Tom
+
+On Thu, 15 Sep 2005 20:39:00 +0100
+Kevin Donnelly <kevin at dotmon.com> wrote:
+
+> (This deals with the issue I posted about yesterday - if you like it
+> could be put on the website as a howto.)
+> 
+> A recent version of cairo (cairo-1.0.0) contained only
+> libcairo.so.2.  Many of the SUSE 9.3 rpms were compiled against an
+> earlier version (cairo-0.3.0) which contained only libcairo.so.1.
+> Many recent rpms have been compiled against the new version, and will
+> not install, because they have a dependency on libcairo.so.2 which
+> cannot be met.  But upgrading cairo (or installing it from apt) will
+> mean that existing apps will stop working unless you symlink
+> libcairo.so.1 to the new libcairo.so.2.  This note (based on advice
+> from oc2pus - thanks!) explains how to deal with this situation.
+> 
+> Run:
+> rpm -ql cairo
+> to see what version you have.  If it contains libcairo.so.1, you can
+> either keep a copy of this:
+> (su) cd /usr/lib
+> (su) cp libcairo.so.1 libcairo.so.1_orig
+> and move it back once you have upgraded cairo, or you can make a
+> symlink as shown below.  If it contains libcairo.so.2, carry out the
+> last two steps here (symlink and virtual rpm).
+> 
+> Download cairo-1.0.0 from somewhere like:
+> ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/i386/supplementary/GNOME/update_for_9.3/applications
+> Cairo depends on libpixman, so you will need to install that if it is
+> not already installed - the best thing is probably to download
+> libpixman-0.1.6 from the same place.  Many multimedia apps will also
+> want libpangocairo.so.1, so get pango-1.10.0 while you're at it.
+> Download the equivalent -devel rpms from:
+> ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/i386/supplementary/GNOME/update_for_9.3/development
+> if you think you might be compiling software later.
+> 
+> Go to the download directory, and run:
+> (su) rpm -Uvh libpix*
+> (su) rpm -Uvh cairo*
+> (su) rpm -Uvh pango*
+> (su) SuSEconfig
+> 
+> With the new cairo installed (or if "rpm -ql cairo" earlier showed 
+> libcairo.so.2), symlink libcairo.so.1:
+> (su) cd /usr/lib
+> (su) ln -s libcairo.so.2 libcairo.so.1
+> 
+> To keep the rpm database happy, so that it does not complain about a
+> missing libcairo.so.1, install the attached myVirtualPackages.rpm
+> (kindly supplied by oc2pus - see his script for this at:
+> http://www.linux-club.de/viewtopic.php?t=13336
+> 
+> The above steps mean that most of the multimedia rpms made by oc2pus
+> at:
+> http://ftp4.gwdg.de/pub/linux/suse/apt/SuSE/9.2-i386/RPMS.suser-oc2pus/
+> should now install with no problems.
+> 
+> -- 
+> 
+> Pob hwyl / Best wishes
+> 
+> Kevin Donnelly
+> 
+> www.kyfieithu.co.uk - Meddalwedd Rhydd yn Gymraeg
+> www.cymrux.org.uk - Linux Cymraeg ar un CD
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jacklab-users/attachments/20050915/daf35221/attachment.pgp>
+

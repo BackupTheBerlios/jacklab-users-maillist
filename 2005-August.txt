@@ -1,0 +1,18 @@
+From gimpel at sonnenkinder.org  Thu Aug 18 22:10:30 2005
+From: gimpel at sonnenkinder.org (Thomas Kuther)
+Date: Thu, 18 Aug 2005 22:10:30 +0200
+Subject: [Jacklab-users] Let's test!
+Message-ID: <20050818221030.5ba517d7@SiRiUS.home>
+
+This is a mail without any sense. the only purpose it to test the ml
+functions :)
+
+moooo!
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jacklab-users/attachments/20050818/9c967215/attachment.pgp>
+
